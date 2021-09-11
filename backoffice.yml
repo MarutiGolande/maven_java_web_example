@@ -6,7 +6,7 @@ Devdeploy:
   script:
 
     - echo "Deploy to development Server"
-    - "cd /var/lib/jenkins/workspace/backoffice && git pull origin master && mvn install"
+    - "ssh -o StrictHostKeyChecking=no cd /var/lib/jenkins/workspace/backoffice && git pull  && mvn install"
     #- mvn clean install
     #- mvn sonar:sonar -Dsonar.projectKey=java -Dsonar.host.url=http://78.47.89.165:9000 -Dsonar.login=dc567dee92bf33383f69158bf0f9778ab769d61e -Dsonar.java.binaries=target/classes
   only:
